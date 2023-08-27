@@ -1,0 +1,55 @@
+<mat-card *ngIf="user">
+    <h1 class="mt-10 ml-10">Your Profile Details</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="profile-image" alt="">
+                    <h1 class="mt-20">{{user.firstname}} {{user.lastname}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <!-- table details -->
+                        <table class="table text-center mt-10">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>Firstname</td>
+                                <td>{{user.firstname}}</td>
+                            </tr>
+                            <tr>
+                                <td>Lastname</td>
+                                <td>{{user.lastname}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>{{user.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Active</td>
+                                <td>{{user.enabled ? 'ACTIVE' : 'INACTIVE'}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="container text-center mt-20">
+            <button mat-raised-button color="primary">Update</button>
+            <button mat-raised-button class="ml-10" color="accent">SHARE</button>
+        </div>
+    </mat-card-actions>
+</mat-card>
