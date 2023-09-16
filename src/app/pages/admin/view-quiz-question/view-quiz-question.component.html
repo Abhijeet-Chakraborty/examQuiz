@@ -5,7 +5,7 @@
         <button mat-raised-button color="primary" [routerLink]="'/admin-dashboard/add-question/' + qId + '/' + qTitle"><mat-icon
                 aria-hidden="false" fontIcon="add_circle"></mat-icon>Add</button>
     </div>
-    <mat-card *ngFor="let q of questions; let i = index">
+    <mat-card class="mt-20" *ngFor="let q of questions; let i = index">
         <mat-card-content>
             <div class="row">
                 <div class="col-md-12">
@@ -32,8 +32,14 @@
                     </div>
                 </div>
             </div>
-        </mat-card-content>
+        </mat-card-content>        
         <mat-divider></mat-divider>
         <p class="ml-10 mt-10"><b>Correct Answer: </b>{{q.answer}}</p>
+        <div class="container text-center mb-20">
+            <button mat-raised-button color="primary" [routerLink]="'/admin-dashboard/update-question/' + q.quesId + '/' + qTitle"><mat-icon fontIcon="edit_circle"></mat-icon> Edit</button>
+            <button mat-raised-button class="ml-10" color="warn" (click)="deleteQuestion(q.quesId)"><mat-icon fontIcon="delete_circle"></mat-icon> Delete</button>
+        </div>
+                  
     </mat-card>
+    
 </div>

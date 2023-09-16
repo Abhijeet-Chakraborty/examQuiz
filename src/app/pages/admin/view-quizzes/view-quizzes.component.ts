@@ -12,7 +12,6 @@ export class ViewQuizzesComponent implements OnInit{
   
  
   quizzes : any = [];
-  response : any = {};
     
     constructor(private quiz:QuizService){}
 
