@@ -1,1 +1,6 @@
-<router-outlet></router-outlet> 
+<ngx-ui-loader [pbThickness]="3" fgsColor="#ff4081" pbColor="#ff4081" text="Loading..." fgsType="three-strings"
+    [fgsSize]="100"></ngx-ui-loader>
+
+<div ngxUiLoaderBlurred [blur]="6">
+    <router-outlet></router-outlet>
+</div>

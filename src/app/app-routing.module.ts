@@ -18,6 +18,8 @@ import { ViewQuizQuestionComponent } from './pages/admin/view-quiz-question/view
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { UpdateQuizQuestionComponent } from './pages/admin/update-quiz-question/update-quiz-question.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartQuizComponent } from './pages/user/start-quiz/start-quiz.component';
 
 const routes: Routes = [
   {
@@ -90,8 +92,17 @@ const routes: Routes = [
       {
         path: ':catId',
         component: LoadQuizComponent
+      },
+      {
+        path: 'instructions/:qId',
+        component: InstructionsComponent
       }
     ]
+  },
+  {
+    path: 'start-quiz/:qId',
+    component: StartQuizComponent,
+    canActivate: [UserGuard]
   }
 ];
 

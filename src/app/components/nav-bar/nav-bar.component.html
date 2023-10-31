@@ -7,12 +7,9 @@
   <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-raised-button color="accent">Login</a>
   <a *ngIf="!isLoggedIn" [routerLink]="'/signup'" mat-raised-button color="accent"
     class="mr-20 ml-20">Register</a>
-    <a [routerLink]="'/admin-dashboard/profile'" mat-icon-button
-  *ngIf="isLoggedIn && user" class="mr-20 ml-20" >{{ user['username'] }}</a>
-  <a 
-  (click) = "logout()"
+  <span class="mr-10"><a style="font-size: 20px;" [routerLink]="'/admin-dashboard/profile'" mat-button
+    *ngIf="isLoggedIn && user" >{{user.username}}</a></span>
+  <a (click) = "logout()"
   *ngIf="isLoggedIn" mat-raised-button color="accent" class="mr-20 ml-20">Logout</a>
-  
-
 
 </mat-toolbar>

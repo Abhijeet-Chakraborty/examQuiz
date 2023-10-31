@@ -10,7 +10,7 @@
                 <h1 class="text-center">Login Here !!</h1>
                 <form (ngSubmit)="formSubmit()">                    
                      <!--Username-->
-                    <mat-form-field class="full-width" appearance="outline">
+                    <mat-form-field class="full-width ml-20" appearance="outline">
                         <mat-label>Username</mat-label>
                         <input 
                         [(ngModel)]="loginData.username"
@@ -19,7 +19,7 @@
                         matInput placeholder="Enter Username">
                     </mat-form-field>
                     <!--Password-->
-                    <mat-form-field class="full-width" appearance="outline">
+                    <mat-form-field class="full-width ml-20" appearance="outline">
                         <mat-label>Password</mat-label>
                         <input 
                         [(ngModel)]="loginData.password"
@@ -28,8 +28,9 @@
                     </mat-form-field>
                     <div class="container" class="text-center">
                         <button mat-raised-button color='primary' type="submit">Login</button>
-                        <button class="ml-10" mat-raised-button color='accent' type="reset">Reset</button>
+                        <button class="ml-10" mat-raised-button color='accent' type="reset">Reset</button>        
                     </div>
+                    <br>
                 </form>
             </mat-card>                
             </div>
